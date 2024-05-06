@@ -15,7 +15,10 @@ export default function FAQ5() {
 
   return (
     <div className="mb-10 ">
-      <h2 data-aos="fade-up" className="max-[350px]:text-lg font-bold text-2xl font-poppins text-center text-orange-500 mb-10">
+      <h2
+        data-aos="fade-up"
+        className="max-[350px]:text-lg font-bold text-2xl font-poppins text-center text-orange-500 mb-10"
+      >
         Frequently asked questions about BerimboloSecurity
       </h2>
       {questions.map((item, i) => (
@@ -26,7 +29,11 @@ export default function FAQ5() {
               {openStates[i] ? <FaMinus /> : <FaPlus />}
             </button>
           </div>
-          <div className={`answer ${openStates[i] ? "block" : "hidden"}  p-3 border text-gray-700 dark:text-gray-300`}>
+          <div
+            className={`answer ${
+              openStates[i] ? "block" : "hidden"
+            } h-36 lg:h-20  p-3 border text-gray-700 dark:text-gray-300`}
+          >
             <p>{item.answer}</p>
           </div>
         </div>
