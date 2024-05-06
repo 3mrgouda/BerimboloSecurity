@@ -40,8 +40,11 @@ export default function Hero2() {
   }, []);
   return (
     <div className="slider-container font-poppins flex flex-col gap-5">
-      <h2 data-aos="flip-up" className="font-medium capitalize text-lg text-center font-sans dark:text-white lg:text-2xl lg:text-uppercase ">
-        We handle everything from installation to monitoring.
+      <h2
+        data-aos="fade-up"
+        className="max-[350px]:text-lg font-bold text-2xl font-poppins text-center uppercase text-orange-500 mb-10"
+      >
+        Protecting your world with innovative security solutions.
       </h2>
       <Slider
         arrows={false}
