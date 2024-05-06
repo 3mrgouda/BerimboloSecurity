@@ -4,16 +4,19 @@ import { FaRegCircleCheck, FaRegCircleXmark } from "react-icons/fa6";
 export default function Pricing4() {
   return (
     <section class="py-24 ">
+       <h2 data-aos="fade-up" className="max-[350px]:text-lg font-bold text-2xl font-poppins text-center text-orange-500 mb-10">
+        Pricing for your security needs
+      </h2>
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-8 lg:space-y-0 lg:items-center">
-          <div class="flex flex-col mx-auto max-w-sm text-white dark:border  bg-black p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-black/90">
+          <div data-aos="fade-up" class="flex flex-col mx-auto max-w-sm dark:text-white dark:border border-2 dark:border-white border-black dark:bg-black p-6 xl:py-9 xl:px-12 transition-all duration-500 ">
             <h3 class="font-manrope text-2xl font-bold mb-3">
               Basic security package
             </h3>
             <div class="flex items-center mb-6">
               <span class="font-manrope mr-2 text-6xl font-semibold">$150</span>
             </div>
-            <ul class="mb-12 space-y-6 text-left text-lg text-white/70">
+            <ul class="mb-12 space-y-6 text-left text-lg text-black/70 dark:text-white/70">
               <li class="flex items-center space-x-4">
                 <FaRegCircleCheck />
                 <span>1 x Alarm system</span>
@@ -38,7 +41,7 @@ export default function Pricing4() {
               Basic plan
             </a>
           </div>
-          <div class="flex flex-col mx-auto max-w-sm text-white dark:border  bg-black transition-all duration-500 hover:bg-black/90 ">
+          <div data-aos="zoom-in" class="flex flex-col mx-auto max-w-sm dark:text-white dark:border border-2 border-black dark:border-white dark:bg-black transition-all duration-500   ">
             <div class="uppercase bg-gradient-to-r from-orange-500 to-orange-900  p-3 text-center text-white">
               MOST POPULAR
             </div>
@@ -51,7 +54,7 @@ export default function Pricing4() {
                   $300
                 </span>
               </div>
-              <ul class="mb-8 space-y-6 text-left text-lg text-white/70 ">
+              <ul class="mb-8 space-y-6 text-left text-lg text-black/70 dark:text-white/70 ">
                 <li class="flex items-center space-x-4">
                   <FaRegCircleCheck />
                   <span>1 x Alarm system</span>
@@ -78,14 +81,14 @@ export default function Pricing4() {
               Standard plan
             </a>
           </div>
-          <div class="flex dark:border flex-col mx-auto max-w-sm text-white  bg-black p-6 xl:py-9 xl:px-12 transition-all duration-500 hover:bg-black/90">
+          <div data-aos="fade-up" class="flex dark:border flex-col mx-auto max-w-sm dark:text-white border-2 border-black dark:border-white dark:bg-black p-6 xl:py-9 xl:px-12 transition-all duration-500 ">
             <h3 class="font-manrope text-2xl font-bold mb-3">
               Deluxe security package
             </h3>
             <div class="flex items-center mb-6">
               <span class="font-manrope mr-2 text-6xl font-semibold">$500</span>
             </div>
-            <ul class="mb-12 space-y-6 text-left text-lg text-white/70 ">
+            <ul class="mb-12 space-y-6 text-left text-lg text-black/70 dark:text-white/70 ">
               <li class="flex items-center space-x-4">
                 <FaRegCircleCheck />
                 <span>1 x Alarm system</span>

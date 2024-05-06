@@ -40,20 +40,20 @@ export default function Hero2() {
   }, []);
   return (
     <div className="slider-container font-poppins flex flex-col gap-5">
-      <h2 className="font-medium capitalize text-lg text-center font-sans dark:text-white lg:text-2xl lg:text-uppercase ">
+      <h2 data-aos="flip-up" className="font-medium capitalize text-lg text-center font-sans dark:text-white lg:text-2xl lg:text-uppercase ">
         We handle everything from installation to monitoring.
       </h2>
       <Slider
-       arrows={false}
+        arrows={false}
         asNavFor={nav2}
         ref={(slider) => (sliderRef1 = slider)}
         autoplay={true}
         autoplaySpeed={3000}
       >
         {sliderImgs.map((item) => (
-          <div key={item.id} >
+          <div data-aos="zoom-in-up" key={item.id}>
             <img
-              className="w-full aspect-video object-cover dark:border "
+              className="w-full cursor-pointer hover:border-orange-500 lg:w-[80%] lg:mx-auto aspect-video lg:aspect-[4/2] lg:bg-center object-cover dark:border "
               src={item.src}
               alt=""
             />
@@ -62,19 +62,19 @@ export default function Hero2() {
       </Slider>
       <h4 className="dark:text-white lg:text-xl">Our Products</h4>
       <Slider
-       arrows={false} 
+        arrows={false}
         asNavFor={nav1}
         ref={(slider) => (sliderRef2 = slider)}
-        slidesToShow={3}
+        slidesToShow={window.innerWidth < 768 ? 3 : 4}
         swipeToSlide={true}
         focusOnSelect={true}
         autoplay={true}
         autoplaySpeed={3000}
       >
         {sliderImgs.map((item) => (
-          <div key={item.id} className="hover:scale-105 duration-300">
+          <div data-aos="zoom-in-down" key={item.id}>
             <img
-              className="w-[80%] aspect-video object-cover rounded-lg mx-auto p-1 dark:border"
+              className="w-[80%] lg:w-[40%] aspect-video object-cover cursor-pointer border-2 hover:border-orange-500  rounded-lg mx-auto p-1 dark:border"
               src={item.src}
               alt=""
             />

@@ -54,25 +54,37 @@ export default function Navbar1() {
     },
   ];
 
-  const [theme, setTheme] = useState("light");
-  localStorage.setItem("theme", JSON.stringify(theme));
+  const [theme, setTheme] = useState(
+    JSON.parse(localStorage.getItem("theme")) || "light"
+  );
   useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("theme", JSON.stringify(theme));
     if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
   }, [theme]);
+
   const handleThemeSwitch = () => {
-   setTheme(theme === "dark" ? "light" : "dark");
-  }
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
-    <header className="">
+    <header  data-aos="fade-down" className="">
       <nav
         className={` max-[350px]:gap-0 flex items-center justify-around py-4 gap-10 md:gap-0  max-[350px]:h-16 h-20 dark:bg-black border-b-2 border-black dark:border-white bg-white dark:border-b dark:text-white mb-10 fixed z-50 w-full`}
       >
         <div className="logo flex items-center gap-3 sm:gap-10">
-          <button className="max-[350px]:text-3xl text-4xl md:hidden" onClick={() => setOpen(!open)}>
+          <button
+            className="max-[350px]:text-3xl text-4xl md:hidden"
+            onClick={() => setOpen(!open)}
+          >
             {open ? <MdClose /> : <MdMenu />}
           </button>
           <a className="max-[350px]:text-xl text-2xl lg:text-4xl " href="#">
@@ -93,7 +105,10 @@ export default function Navbar1() {
         </div>
 
         <div className="flex bottom-0 gap-4 sm:gap-10">
-          <button className="text-xl lg:hidden" onClick={() => setOpenIcon(!openIcon)}>
+          <button
+            className="text-xl lg:hidden"
+            onClick={() => setOpenIcon(!openIcon)}
+          >
             {!openIcon ? <FaPlus /> : <FaMinus />}{" "}
           </button>
           <div
@@ -107,15 +122,12 @@ export default function Navbar1() {
               </a>
             ))}
           </div>
-          <button
-            className="text-xl"
-            onClick={handleThemeSwitch}
-          >
+          <button className="text-xl" onClick={handleThemeSwitch}>
             {theme === "dark" ? <MdDarkMode /> : <MdLightMode />}
           </button>
         </div>
       </nav>
-     
+
       <nav
         className={`Navigation duration-300   ${
           !open ? "hidden" : "block"
@@ -141,7 +153,7 @@ export default function Navbar1() {
           </ul>
         </div>
       </nav>
-      <div className="w-full h-32 dark:bg-black"></div>
+      <div className="w-full h-32  dark:bg-black"></div>
     </header>
   );
 }
