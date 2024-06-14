@@ -49,13 +49,19 @@ export default function Places() {
     },
   ];
   return (
-    <div>
-      <h2 data-aos="fade-up" className="max-[350px]:text-lg font-bold text-3xl font-poppins text-center mb-10 text-orange-500">
+    <div id="services" className="my-36">
+      <h2
+        data-aos="fade-up"
+        className="max-[350px]:text-lg font-bold text-3xl font-poppins text-center mb-10 text-orange-500"
+      >
         What kind of property are you protecting?
       </h2>
       {placesIcons.map((item) => (
         <div className="p-10">
-          <h4 data-aos="fade-up" className="max-[350px]:text-lg font-bold text-xl dark:text-white">
+          <h4
+            data-aos="fade-up"
+            className="max-[350px]:text-lg font-bold text-xl dark:text-white"
+          >
             BerimboloSecurity for {item.name}
           </h4>
           <div
@@ -63,13 +69,17 @@ export default function Places() {
             className="flex flex-col lg:flex-row    lg:justify-between lg:items-center lg:gap-20 "
           >
             {" "}
-            <section data-aos="fade-right"
+            <section
+              data-aos="fade-right"
               style={{ order: `${item.order}` }}
               className={`img lg:w-1/2   pt-5 pb-0`}
             >
               <img src={`${item.src}`} className="mx-auto w-[90%]" alt="" />
             </section>
-            <section data-aos="fade-left" className="lg:w-1/2  lg:flex lg:flex-col lg:justify-center">
+            <section
+              data-aos="fade-left"
+              className="lg:w-1/2  lg:flex lg:flex-col lg:justify-center"
+            >
               <h5 className="font-bold text-xl  text-orange-500 font-poppins">
                 {item.name}:
               </h5>

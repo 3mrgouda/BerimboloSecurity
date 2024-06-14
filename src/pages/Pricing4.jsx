@@ -3,7 +3,7 @@ import { FaRegCircleCheck, FaRegCircleXmark } from "react-icons/fa6";
 
 export default function Pricing4() {
   return (
-    <section class="py-24 ">
+    <section class="py-24 " id="pricing">
        <h2 data-aos="fade-up" className="max-[350px]:text-lg font-bold text-2xl font-poppins text-center text-orange-500 mb-10">
         Pricing for your security needs
       </h2>

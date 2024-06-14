@@ -63,7 +63,9 @@ export default function Hero2() {
           </div>
         ))}
       </Slider>
-      <h4 className="dark:text-white lg:text-xl">Our Products</h4>
+      <h4 className="dark:text-white lg:text-xl" id="products">
+        Our Products
+      </h4>
       <Slider
         arrows={false}
         asNavFor={nav1}

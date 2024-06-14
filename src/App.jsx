@@ -21,14 +21,14 @@ export default function App() {
     Aos.refresh();
   }, []);
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-black font-poppins w-full overflow-hidden">
       <Navbar1 />
       <div className="container mx-auto px-4  flex flex-col gap-20 dark:bg-black">
         <Hero2 />
         <Sections3 data={api} />
         <Places />
         <Pricing4 />
-        <FAQ5/>
+        <FAQ5 />
       </div>
       <Footer5 />
     </div>
