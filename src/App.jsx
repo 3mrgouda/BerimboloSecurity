@@ -21,7 +21,7 @@ export default function App() {
     Aos.refresh();
   }, []);
   return (
-    <div className="dark:bg-black font-poppins w-full overflow-hidden">
+    <div className="dark:bg-black font-poppins w-full overflow-hidden scroll-smooth">
       <Navbar1 />
       <div className="container mx-auto px-4  flex flex-col gap-20 dark:bg-black">
         <Hero2 />

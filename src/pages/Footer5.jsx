@@ -1,14 +1,39 @@
 import React from "react";
 import { FaCopyright, FaGithub, FaLinkedin } from "react-icons/fa6";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import Swal from "sweetalert2";
+import "sweetalert2/src/sweetalert2.scss";
 
 function Footer5() {
   const handleSubmit = (event) => {
     event.preventDefault();
-    toast.success("Thank you! We will contact you later.");
+    Swal.fire({
+      icon: "success",
+      title: "Thanks for subscribing.",
+    });
   };
 
+  const links = [
+    {
+      id: 1,
+      title: "Home",
+      url: "/",
+    },
+    {
+      id: 2,
+      title: "Services",
+      url: "#services",
+    },
+    {
+      id: 3,
+      title: "Pricing",
+      url: "#pricing",
+    },
+    {
+      id: 4,
+      title: "Contact",
+      url: "#contact",
+    },
+  ];
   return (
     <footer
       id="contact"
@@ -44,15 +69,15 @@ function Footer5() {
               Quick Link
             </p>
             <div className="flex flex-col items-start mt-2 space-y-2">
-              <p className="dark:text-white transition-colors duration-300 text-gray-700 dark:hover:text-orange-400 hover:underline hover:cursor-pointer hover:text-black">
-                Home
-              </p>
-              <p className="dark:text-white transition-colors duration-300 text-gray-700 dark:hover:text-orange-400 hover:underline hover:cursor-pointer hover:text-black">
-                Who We Are
-              </p>
-              <p className="dark:text-white transition-colors duration-300 text-gray-700 dark:hover:text-orange-400 hover:underline hover:cursor-pointer hover:text-black">
-                Our Philosophy
-              </p>
+              {links.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.url}
+                  className="dark:text-white transition-colors  text-gray-700 hover:text-black dark:hover:text-orange-500 dark:hover:border-orange-500 hover:border-b-2 duration-300"
+                >
+                  {link.title}
+                </a>
+              ))}
             </div>
           </div>
           <div data-aos="fade-up">
@@ -99,7 +124,6 @@ function Footer5() {
           </p>
         </div>
       </div>
-      <ToastContainer />
     </footer>
   );
 }
